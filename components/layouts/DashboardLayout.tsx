@@ -5,12 +5,25 @@ import {
   HomeIcon,
 } from '@heroicons/react/24/outline';
 
+import { SVGProps, ComponentType } from 'react';
+
+type NavigationElement = {
+  name: string;
+  href: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  current: boolean;
+};
+
 import { StaticSidebar } from '../sidebars/StaticSidebar';
 import { MobileSidebar } from '../sidebars/MobileSidebar';
 import { useApplicationContextState } from '@/contexts/ApplicationContext';
 import { Button } from '../atoms/button/Button';
 
-const navigation = [
+// const navigation = [
+//   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
+// ];
+
+const navigation: NavigationElement[] = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
 ];
 
